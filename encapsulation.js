@@ -7,13 +7,15 @@ var Book = /** @class */ (function () {
     Book.prototype.details = function () {
         console.log(this.id, this.name, this.author);
     };
+    Book.prototype.authorInfo = function () {
+        console.log('Author is ', this.author);
+    };
     return Book;
 }());
 var book = new Book(1, 'Harry Potter', 'Sten Lee');
-console.log(book);
-function func(x, y) { }
+book.details();
 var btn = document.querySelector('button');
-console.log(btn);
 btn.addEventListener('click', function (e) {
-    console.log(e.target);
+    btn.innerText = 'Clicked';
+    document.getElementById('h1').innerHTML += ' Stuff';
 });
